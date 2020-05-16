@@ -29,7 +29,7 @@ export const handleGetAuthUser = (user) => (dispatch) => {
     });
 };
 
-export const handleLogout = () => {
+export const handleLogoutUser = () => {
   return {
     type: USER_LOGOUT,
   };

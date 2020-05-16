@@ -22,7 +22,7 @@ class DashBoard extends Component {
   render() {
     const { answeredQuestions, unansweredQuestions, users } = this.props;
 
-    if (this.props.authUser === null) return <Redirect to="/" />;
+   // if (this.props.authUser === null) return <Redirect to="/" />;
     return (
       <div className="row">
         <div className="col-sm-6 offset-sm-3">

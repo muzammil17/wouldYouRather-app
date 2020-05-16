@@ -1,10 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { handleLogout } from "../actions/authUserAction";
+import { Link, withRouter } from "react-router-dom";
+import { handleLogoutUser } from "../actions/authUserAction";
+import { handleLogout } from "../actions/authenticationAction";
 
 const Navbar = (props) => {
   function handleOnClick() {
+    props.dispatch(handleLogoutUser());
     props.dispatch(handleLogout());
   }
   const { authUser } = props;
@@ -27,7 +29,7 @@ const Navbar = (props) => {
       >
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/dashboard">
               Home
             </Link>
           </li>
@@ -64,4 +66,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Navbar);
+export default withRouter(connect(mapStateToProps)(Navbar));

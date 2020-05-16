@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 export class LeaderBoard extends Component {
   render() {
     const { authUser, users } = this.props;
-    if (authUser === null) return <Redirect to="/" />;
+    //if (authUser === null) return <Redirect to="/" />;
     return (
       <div className="container">
         <div className="row mt-5">

@@ -1,6 +1,10 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+import Page404 from "./page404";
 
 const Question = ({ question, users, handleSubmit, handleChange }) => {
+
+  if(question === undefined) return <Page404 />
   return (
     <div>
       <div className="container">

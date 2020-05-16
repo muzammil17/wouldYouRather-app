@@ -3,10 +3,12 @@ import { connect } from "react-redux";
 import { handleGetAuthUser } from "../actions/authUserAction";
 import { Redirect } from "react-router-dom";
 import udactiy from "../images/udacity.png";
+import { handleLogin } from "../actions/authenticationAction";
 
 class Login extends Component {
   state = {
     userName: "",
+    redirectToReferer: false,
   };
 
   handleChange = (e) => {
@@ -16,12 +18,14 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.dispatch(handleGetAuthUser(this.state.userName));
+    this.props.dispatch(handleLogin(this.setState({ redirectToReferer: true})))
   };
 
   render() {
     const { users } = this.props;
-    if (this.props.authUser !== null) {
-      return <Redirect to="/dashboard" />;
+    const {from} = this.props.location.state || {from: {pathname: "/"}}
+    if (this.state.redirectToReferer) {
+      return <Redirect to={from} />;
     }
     return (
       <div className="container">

@@ -28,7 +28,7 @@ export class AddQuestion extends Component {
 
   render() {
     //console.log(this.props);
-    if (this.props.authUser === null) return <Redirect to="/" />;
+   // if (this.props.authUser === null) return <Redirect to="/" />;
     return (
       <div className="container">
         <div className="row">
