@@ -11,10 +11,12 @@ import AddQuestion from "./addQuestion";
 import LeaderBoard from "./leaderBoard";
 import Page404 from "./page404";
 import PrivateRoute from "./privateRoute";
+import { handleGetQuestions } from "../actions/questionActions";
 
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleGetUser());
+    this.props.dispatch(handleGetQuestions())
   }
   render() {
     return (

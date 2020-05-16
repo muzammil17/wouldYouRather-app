@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 
 import { handleSaveAnswer } from "../actions/questionActions";
 
@@ -69,8 +68,8 @@ class Polling extends Component {
         {voted ? (
           <Voted
             {...this.state}
-            authUser={authUser}
-            users={users}
+            // authUser={authUser}
+            // users={users}
             question={question}
           />
         ) : (

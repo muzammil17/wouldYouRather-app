@@ -6,27 +6,25 @@ const authReducer = (state = null, action) => {
     case GET_AUTHUSER:
       return action.user;
 
-    case SAVE_ANSWER :
-    let { qid, answer } = action;
+    case SAVE_ANSWER:
+      let { qid, answer } = action;
       return {
         ...state,
-        // questions : state.questions.concat(qid),
-        answers :{
+        answers: {
           ...state.answers,
-          [`${qid}`] : answer
-        }
-      }
+          [qid]: answer,
+        },
+      };
     case SAVE_QUESTION:
       return {
         ...state,
-        questions : state.questions.concat(action.question.id),
-      }
+        questions: state.questions.concat(action.question.id),
+      };
     case USER_LOGOUT:
-      return null
+      return null;
     default:
       return state;
   }
 };
 
-
-export default authReducer
+export default authReducer;

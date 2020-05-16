@@ -1,10 +1,10 @@
 import React from "react";
+import {connect} from "react-redux"
 
 const Voted = (props) => {
   const { users, authUser, question, optionOne, optionTwo, totalVotes } = props;
-  console.log(authUser);
   let voted = authUser.answers[question.id];
-  console.log(voted);
+
   return (
     <div>
       <div className="container">
@@ -90,4 +90,11 @@ const Voted = (props) => {
   );
 };
 
-export default Voted;
+const mapStateToProps = (state) => {
+  return{
+    authUser: state.authUser,
+    users: state.users
+  }
+}
+
+export default connect(mapStateToProps)(Voted);

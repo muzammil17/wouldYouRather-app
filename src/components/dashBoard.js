@@ -10,9 +10,9 @@ class DashBoard extends Component {
     tab1: true,
     tab2: false,
   };
-  componentDidMount() {
-    this.props.dispatch(handleGetQuestions());
-  }
+  // componentDidMount() {
+  //   this.props.dispatch(handleGetQuestions());
+  // }
   handleChangeTab2 = () => {
     this.setState({ tab1: false, tab2: true });
   };
