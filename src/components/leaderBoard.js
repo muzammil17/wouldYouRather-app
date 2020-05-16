@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 
 export class LeaderBoard extends Component {
   render() {
-    const { authUser, users } = this.props;
-    //if (authUser === null) return <Redirect to="/" />;
+    const { users } = this.props;
+
     return (
       <div className="container">
         <div className="row mt-5">

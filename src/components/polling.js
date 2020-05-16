@@ -61,8 +61,7 @@ class Polling extends Component {
 
   render() {
     const { voted } = this.state;
-    const { question, users, authUser } = this.props;
-  //  if (this.props.authUser === null) return <Redirect to="/" />;
+    const { question, users } = this.props;
     return (
       <div>
         {voted ? (

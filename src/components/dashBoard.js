@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { handleGetQuestions } from "../actions/questionActions";
-import { Redirect } from "react-router-dom";
+
 
 import QuestionCard from "./questionCard";
 
@@ -10,9 +9,7 @@ class DashBoard extends Component {
     tab1: true,
     tab2: false,
   };
-  // componentDidMount() {
-  //   this.props.dispatch(handleGetQuestions());
-  // }
+
   handleChangeTab2 = () => {
     this.setState({ tab1: false, tab2: true });
   };
@@ -22,7 +19,6 @@ class DashBoard extends Component {
   render() {
     const { answeredQuestions, unansweredQuestions, users } = this.props;
 
-   // if (this.props.authUser === null) return <Redirect to="/" />;
     return (
       <div className="row">
         <div className="col-sm-6 offset-sm-3">
