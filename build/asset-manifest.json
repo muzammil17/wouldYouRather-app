@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76f5435f.chunk.css",
+    "main.js": "/static/js/main.f156be64.chunk.js",
+    "main.js.map": "/static/js/main.f156be64.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19b5b27b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19b5b27b.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.425d3e08.chunk.js": "/static/js/2.425d3e08.chunk.js",
+    "static/js/2.425d3e08.chunk.js.map": "/static/js/2.425d3e08.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2cfe53724ca9a90168f15116540918d1.js": "/precache-manifest.2cfe53724ca9a90168f15116540918d1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.76f5435f.chunk.css.map": "/static/css/main.76f5435f.chunk.css.map",
+    "static/js/2.425d3e08.chunk.js.LICENSE.txt": "/static/js/2.425d3e08.chunk.js.LICENSE.txt",
+    "static/media/udacity.png": "/static/media/udacity.1fc43d1e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19b5b27b.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.425d3e08.chunk.js",
+    "static/css/main.76f5435f.chunk.css",
+    "static/js/main.f156be64.chunk.js"
+  ]
+}
